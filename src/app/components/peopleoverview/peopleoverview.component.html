@@ -1,0 +1,4 @@
+<div style="display: flex; justify-content: space-around; height: 100%; margin: auto 0; padding-top: 5rem;">
+    <app-list [heading]="'Customer Overview'" [peoples]="customers" [people]="'Customer'" [case]="'customer'" (outEvent)="onHandleEvent($event)"></app-list>
+    <app-list [heading]="'Buyer Overview'" [peoples]="buyers" [people]="'Buyer'" [case]="'buyer'" (outEvent)="onHandleEvent($event)"></app-list>
+</div>

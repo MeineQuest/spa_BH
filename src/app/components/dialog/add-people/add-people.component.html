@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Hi {{data.people}}</h1>
+<div mat-dialog-content>
+    <p>What's your name?</p>
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="name">
+    </mat-form-field>
+    <ng-container *ngIf="data.isBuyer">
+        <p>Paypal Link</p>
+        <mat-form-field appearance="fill">
+            <mat-label>Link</mat-label>
+            <input matInput [(ngModel)]="link">
+        </mat-form-field>
+    </ng-container>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button (click)="onYesClick()" cdkFocusInitial>Ok</button>
+</div>
